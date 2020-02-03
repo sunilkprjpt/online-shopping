@@ -21,8 +21,15 @@
 
 <title>Online Shopping - ${title}</title>
 
+<script>
+	window.menu = '${title}';
+</script>
+
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Readable Theme -->
+<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
 <!-- Add custom CSS here -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -32,32 +39,46 @@
 
 <body>
 
-	<!-- Navigation Bar  -->
-	<%@include file="./shared/navbar.jsp"%>
+	<div class="wrapper">
 
-	<!-- Page Content -->
-	<!-- Loading the Home content -->
-	<c:if test="${userClickHome == true}">
-		<%@include file="home.jsp"%>
-	</c:if>
-	<!-- Load only when user clicks about -->
+		<!-- Navigation Bar  -->
+		<%@include file="./shared/navbar.jsp"%>
 
-	<c:if test="${userClickAbout == true}">
-		<%@include file="about.jsp"%>
-	</c:if>
+		<!-- Page Content -->
+		<!-- Loading the Home content -->
+		<div class="content">
+			<c:if test="${userClickHome == true}">
+				<%@include file="home.jsp"%>
+			</c:if>
 
-	<!-- Load only when user click contact -->
-	<c:if test="${userClickContact == true}">
-		<%@include file="contact.jsp"%>
-	</c:if>
-	<!-- Footer comes here -->
-	<%@include file="./shared/footer.jsp"%>
 
-	<!-- /.container -->
+			<!-- Load only when user clicks about -->
 
-	<!-- JavaScript -->
-	<script src="${js}/jquery.js"></script>
-	<script src="${js}/bootstrap.min.js"></script>
+			<c:if test="${userClickAbout == true}">
+				<%@include file="about.jsp"%>
+			</c:if>
+
+			<!-- Load only when user click contact -->
+			<c:if test="${userClickContact == true}">
+				<%@include file="contact.jsp"%>
+			</c:if>
+
+		</div>
+		<!-- Footer comes here -->
+		<%@include file="./shared/footer.jsp"%>
+
+		<!-- /.container -->
+
+		<!-- JavaScript -->
+		<script src="${js}/jquery.js"></script>
+		<script src="${js}/bootstrap.min.js"></script>
+
+
+		<!-- Self Coded Java Script  -->
+
+		<script src="${js}/myapp.js"></script>
+
+	</div>
 
 </body>
 
