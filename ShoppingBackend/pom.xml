@@ -16,7 +16,7 @@
 		<javaee.version>7.0</javaee.version>
 		<spring.version>4.3.2.RELEASE</spring.version>
 		<junit.version>4.12</junit.version>
-		<hibernate.version>5.4.4.Final</hibernate.version>
+		<hibernate.version>5.4.24.Final</hibernate.version>
 	</properties>
 
 	<dependencies>
